@@ -1,6 +1,6 @@
 from tkinter import Canvas
 
-def AFF_TransCoord(x: int, y:int, longueur:int, largeur:int, **arguments)-> list:
+def AFF_TransCoord(x: int, y:int, longueur:int, largeur:int, **arguments):
     """Paramètre :
     - x l'abcisse du centre de la figure voulut
     - y l'ordonné du centre de la figure voulut
@@ -10,7 +10,7 @@ def AFF_TransCoord(x: int, y:int, longueur:int, largeur:int, **arguments)-> list
     """
     return int(x-longueur/2),int(y-largeur/2),int(x+longueur/2),int(y+largeur/2), arguments
 
-def AFF_Rectangle(canvas,x:int, y:int, longueur:int, largeur:int, **arguments)-> list:
+def AFF_Rectangle(canvas,x:int, y:int, longueur:int, largeur:int, **arguments):
     """
     Creer un rectangle
     
