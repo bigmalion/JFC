@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Canvas
 
 def AFF_TransCoord(x: int, y:int, longueur:int, largeur:int, **arguments)-> list:
     """Paramètre :
