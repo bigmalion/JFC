@@ -1,6 +1,6 @@
 # Pacman
 
-Abrévations - AFF : affichage DEP : déplacement PER : personnage
+Abrévations - AFF : affichage PER : personnage GES : Gestion
 
 Fichier :
 
