@@ -1,6 +1,6 @@
 from tkinter import Canvas
 
-def AFF_TransCoord(x: int, y:int, longueur:int, largeur:int, **arguments):
+def AFF_TransCoord(x: int, y:int, longueur:int, largeur:int):
     """Paramètre :
     - x l'abcisse du centre de la figure voulut
     - y l'ordonné du centre de la figure voulut
@@ -8,7 +8,7 @@ def AFF_TransCoord(x: int, y:int, longueur:int, largeur:int, **arguments):
     - longueur la longueur de la figure voulut
     - arguments le dictionnaire contenant toutes les informations supplémentaires pour la figure
     """
-    return int(x-longueur/2),int(y-largeur/2),int(x+longueur/2),int(y+largeur/2), arguments
+    return int(x-longueur/2),int(y-largeur/2),int(x+longueur/2),int(y+largeur/2)
 
 def AFF_Rectangle(canvas,x:int, y:int, longueur:int, largeur:int, **arguments):
     """
@@ -24,7 +24,7 @@ def AFF_Rectangle(canvas,x:int, y:int, longueur:int, largeur:int, **arguments):
     
     Retourne : l'adresse memoire du rectangle
     """
-    return canvas.create_rectangle(AFF_TransCoord(x, y, longueur, largeur, **arguments))
+    return canvas.create_rectangle(AFF_TransCoord(x, y, longueur, largeur), arguments)
 
 def AFF_Cercle(canvas,x:int, y:int, rayon:int, **arguments)-> list:
     """
@@ -39,5 +39,5 @@ def AFF_Cercle(canvas,x:int, y:int, rayon:int, **arguments)-> list:
     
     Retourne : l'adresse memoire du cercle
     """
-    return canvas.create_oval(AFF_TransCoord(x, y, rayon*2, rayon*2, **arguments))
+    return canvas.create_oval(AFF_TransCoord(x, y, rayon*2, rayon*2), arguments)
 
